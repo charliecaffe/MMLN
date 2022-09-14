@@ -1,0 +1,24 @@
+
+// predicate declarations
+CXR_Lung_inflammation(person)
+Cough(person)
+Expectoration(person)
+Purulent_sputum(person)
+Chest_pain(person)
+Difficulty_breathing(person)
+Hemoptysis(person)
+Fever(person)
+Wet_rales(person)
+White_blood_cells_high(person)
+White_blood_cells_low(person)
+Pneumonia(person)
+Tuberculosis(person)
+Lung_cancer(person)
+Pulmonary_embolism(person)
+
+// formulas
+CXR_Lung_inflammation(x) ^ Cough(x) ^ Expectoration(x) => Pneumonia(x)
+CXR_Lung_inflammation(x) ^ Fever(x) => Pneumonia(x)
+CXR_Lung_inflammation(x) ^ Wet_rales(x) => Pneumonia(x)
+CXR_Lung_inflammation(x) ^ White_blood_cells_high(x) => Pneumonia(x)
+CXR_Lung_inflammation(x) ^ White_blood_cells_low(x) => Pneumonia(x)

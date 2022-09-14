@@ -1,0 +1,77 @@
+//predicate declarations
+White_blood_cells_low(person)
+Difficulty_breathing(person)
+Tuberculosis(person)
+Cough(person)
+Pulmonary_embolism(person)
+Purulent_sputum(person)
+Wet_rales(person)
+Fever(person)
+Chest_pain(person)
+Hemoptysis(person)
+Pneumonia(person)
+Expectoration(person)
+CXR_Lung_inflammation(person)
+White_blood_cells_high(person)
+Lung_cancer(person)
+
+// 5.02574  CXR_Lung_inflammation(x) ^ Cough(x) ^ Expectoration(x) => Pneumonia(x)
+5.02574  !CXR_Lung_inflammation(a1) v !Cough(a1) v !Expectoration(a1) v Pneumonia(a1)
+
+// 5.93823  CXR_Lung_inflammation(x) ^ Fever(x) => Pneumonia(x)
+5.93823  !CXR_Lung_inflammation(a1) v !Fever(a1) v Pneumonia(a1)
+
+// 5.83337  CXR_Lung_inflammation(x) ^ Wet_rales(x) => Pneumonia(x)
+5.83337  !CXR_Lung_inflammation(a1) v !Wet_rales(a1) v Pneumonia(a1)
+
+// 4.25107  CXR_Lung_inflammation(x) ^ White_blood_cells_high(x) => Pneumonia(x)
+4.25107  !CXR_Lung_inflammation(a1) v !White_blood_cells_high(a1) v Pneumonia(a1)
+
+// 2.45852  CXR_Lung_inflammation(x) ^ White_blood_cells_low(x) => Pneumonia(x)
+2.45852  !CXR_Lung_inflammation(a1) v !White_blood_cells_low(a1) v Pneumonia(a1)
+
+// 0       CXR_Lung_inflammation(a1)
+0       CXR_Lung_inflammation(a1)
+
+// 0       Cough(a1)
+0       Cough(a1)
+
+// 0       Expectoration(a1)
+0       Expectoration(a1)
+
+// 0       Purulent_sputum(a1)
+0       Purulent_sputum(a1)
+
+// 0       Chest_pain(a1)
+0       Chest_pain(a1)
+
+// 0       Difficulty_breathing(a1)
+0       Difficulty_breathing(a1)
+
+// 0       Hemoptysis(a1)
+0       Hemoptysis(a1)
+
+// 0       Fever(a1)
+0       Fever(a1)
+
+// 0       Wet_rales(a1)
+0       Wet_rales(a1)
+
+// 0       White_blood_cells_high(a1)
+0       White_blood_cells_high(a1)
+
+// 0       White_blood_cells_low(a1)
+0       White_blood_cells_low(a1)
+
+// -1.52734  Pneumonia(a1)
+-1.52734  Pneumonia(a1)
+
+// 0       Tuberculosis(a1)
+0       Tuberculosis(a1)
+
+// 0       Lung_cancer(a1)
+0       Lung_cancer(a1)
+
+// 0       Pulmonary_embolism(a1)
+0       Pulmonary_embolism(a1)
+

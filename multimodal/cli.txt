@@ -1,0 +1,2 @@
+../learnwts -d -i diagnosis.mln -o result/diagnosis-out.mln -t multimodal_Pneumonia_train.db -ne Pneumonia
+../infer -ms -i result/diagnosis-out.mln  -r result/diagnosis.result -e test_evidence.db  -q Pneumonia
